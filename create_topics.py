@@ -10,4 +10,4 @@ topic_list = [
 ]
 
 admin_client.create_topics(new_topics=topic_list, validate_only=False)
-print("✅ Kafka topic 'logs' created.")
+print("Kafka topic 'logs' created.")
