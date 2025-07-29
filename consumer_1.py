@@ -19,7 +19,7 @@ t = 10
 
 recent_errors = defaultdict(deque) 
 services_with_k_errors_within_t = set()
-time_window = t # I am using already in seconds value
+time_window = t 
 
 for message in consumer:
     

@@ -38,7 +38,7 @@ async def process_logs(stream):
             # Sort heap in descending order for display (largest first)
             top_services = sorted(min_heap, key=lambda x: x[0], reverse=True)
 
-            print("\n🔴 Top 3 services with most ERRORs :")
+            print("\nTop 3 services with most ERRORs :")
             for count, svc in top_services:
                 print(f"{svc}: {count} errors")
 

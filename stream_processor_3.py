@@ -29,7 +29,6 @@ async def process_error_logs(logs):
 
 @app.timer(interval=10.0)
 async def print_mean_errors():
-    print("\n=== Mean Time Differences Per Service (every 10s) ===")
     for service, timestamps in service_logs.items():
         timestamps.sort()
         if len(timestamps) < 2:
@@ -42,7 +41,6 @@ async def print_mean_errors():
         ]
         mean_diff = statistics.mean(diffs)
         print(f"{service}: Mean time difference = {mean_diff:.2f} seconds")
-    print("=====================================================")
 
 if __name__ == '__main__':
     app.main()
